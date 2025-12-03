@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Launch & Revenue Blueprint — Get your free build plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta name="description"
+        content="We build & launch software and games that generate revenue. Get your free Launch & Revenue Blueprint — feature roadmap, timeline, monetization & forecast." />
+    <!-- Google Tag Manager (replace GTM-XXXX) -->
+    <!-- <script> (GTM script here) </script> -->
+    <!-- Schema: Organization + Offer -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Your Company Name",
+    "url":"https://yourdomain.com",
+    "logo":"https://yourdomain.com/assets/logo.png",
+    "sameAs":["https://www.linkedin.com/your","https://twitter.com/your"]
+  }
+  </script>
+
+    <style>
+        /* ---------- Variables & reset ---------- */
+        :root {
+            --navy: #0b2545;
+            --green: #22c55e;
+            --yellow: #ffb020;
+            --white: #ffffff;
+            --muted: #6b7280;
+            --card: #f8fafc;
+            --radius: 10px;
+            --maxwidth: 1100px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+            color: var(--navy);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block
+        }
+
+        /* ---------- Layout ---------- */
+        .container {
+            max-width: var(--maxwidth);
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            flex-wrap: wrap
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center
+        }
+
+        .btn-primary {
+            background: var(--green);
+            color: var(--white);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.12)
+        }
+
+        .btn-ghost {
+            background: transparent;
+            border: 2px solid rgba(11, 37, 69, 0.07);
+            padding: 10px 14px;
+            border-radius: 8px
+        }
+
+        /* ---------- Hero ---------- */
+        .hero {
+            background: linear-gradient(180deg, var(--navy) 0%, #0f2b50 100%);
+            color: var(--white);
+            padding: 40px 0;
+            border-radius: 16px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: clamp(26px, 6vw, 44px);
+            margin: 0 0 12px;
+            line-height: 1.1
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .trust-strip {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin-top: 16px;
+            flex-wrap: wrap
+        }
+
+        /* ---------- Lead Card ---------- */
+        .lead-card {
+            background: var(--white);
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(2, 6, 23, 0.12);
+            color: var(--navy)
+        }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .field {
+            flex: 1
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 6px
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #e6edf3;
+            font-size: 15px
+        }
+
+        .small {
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        /* ---------- Sections ---------- */
+        section {
+            padding: 48px 0
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px
+        }
+
+        .card {
+            background: var(--card);
+            padding: 18px;
+            border-radius: 12px
+        }
+
+        .pricing {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap
+        }
+
+        .tier {
+            flex: 1;
+            min-width: 260px;
+            border-radius: 12px;
+            border: 1px solid rgba(11, 37, 69, 0.06);
+            padding: 18px;
+            background: #fff
+        }
+
+        /* ---------- FAQ ---------- */
+        .faq {
+            max-width: 800px;
+            margin: 0 auto
+        }
+
+        details {
+            margin-bottom: 10px;
+            background: #fff;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(11, 37, 69, 0.04)
+        }
+
+        /* ---------- Sticky CTA ---------- */
+        .sticky-cta {
+            position: fixed;
+            left: 12px;
+            right: 12px;
+            bottom: 16px;
+            background: #02102a;
+            padding: 12px;
+            border-radius: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 12px 40px rgba(2, 6, 23, 0.25);
+            flex-wrap: wrap;
+        }
+
+        /* ---------- Responsive Fixes ---------- */
+        @media(max-width:1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .lead-card {
+                order: 2
+            }
+
+            @media(max-width:580px) {
+                .desktop-nav {
+                    display: none;
+                }
+
+                .mobile-btn {
+                    display: block;
+                }
+            }
+
+        }
+
+        @media(max-width:768px) {
+            .grid-3 {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .hero {
+                text-align: center
+            }
+
+            .hero-cta {
+                justify-content: center
+            }
+
+            .trust-strip {
+                justify-content: center
+            }
+        }
+
+        @media(max-width:540px) {
+            .nav {
+                display: none
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr
+            }
+
+            .lead-card {
+                padding: 16px
+            }
+
+            .btn {
+                width: 100%
+            }
+
+            .hero-grid {
+                padding: 10px
+            }
+
+            .tier ul {
+                padding-left: 18px
+            }
+
+            .sticky-cta {
+                flex-direction: column;
+                text-align: center
+            }
+        }
+
+        /* Header Base */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
+            border-bottom: 1px solid #ddd;
+            background: #ffffff;
+        }
+
+        /* Desktop Navigation */
+        .desktop-nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .desktop-nav a {
+            font-weight: 500;
+            color: #111;
+        }
+
+        /* Hamburger Button (hidden by default) */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Mobile Menu (hidden by default) */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 14px;
+            background: #f8f9fb;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 12px;
+            animation: slide 0.3s ease;
+        }
+
+        .mobile-menu a {
+            padding: 10px 6px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* Animation */
+        @keyframes slide {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 🔥 Mobile Rules */
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="brand">
+            <img src="https://fusiontechlab.com/manage/wp-content/uploads/2025/02/cropped-FT_Logo.png"
+                alt="Company logo" style="height:40px" />
+            <div style="font-weight:700"></div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="nav desktop-nav">
+            <a href="#how">How</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#case">Case Studies</a>
+            <a href="#faq">FAQ</a>
+            <a href="#book" class="btn btn-primary">Book Blueprint</a>
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <button id="menuBtn" class="hamburger">☰</button>
+    </header>
+    <!-- Mobile Menu -->
+    <nav id="mobileMenu" class="mobile-menu">
+        <a href="#how">How</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#case">Case Studies</a>
+        <a href="#faq">FAQ</a>
+        <a href="#book" class="btn btn-primary">Book Blueprint</a>
+    </nav>
+    <!-- Hero -->
+    <main>
+        <section class="hero bg-[#021028] text-white py-16" aria-labelledby="hero-title">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 px-5 lg:px-0">
+                <!-- Left Content -->
+                <div>
+                    <h1 id="hero-title" class="text-4xl md:text-5xl font-bold leading-tight">
+                        Launch your software or game — and start generating revenue fast
+                    </h1>
+                    <p class="mt-4 text-gray-300 text-lg">
+                        Custom development + launch strategy for CEOs, business owners and gamers who want a profitable
+                        outcome — not just a product.
+                    </p>
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <a href="#book"
+                            class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition">
+                            Get your free Launch & Revenue Blueprint
+                        </a>
+                        <a href="#demo"
+                            class="px-6 py-3 border border-gray-400 hover:border-white rounded-lg transition">
+                            Watch the 60s demo
+                        </a>
+                    </div>
+
+                    <!-- Trust Logos -->
+                    <div class="flex items-center gap-3 mt-6 opacity-90">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTpfQBzC4D-kGVJfjDA87iorTWwlVKMAXOTA&s"
+                            alt="Client 1" class="h-8 w-8 rounded-full" />
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3n_eCoOped5DaFdQ8iP2yk_LQmJbXjREChw&s"
+                            alt="Client 2" class="h-8 w-8 rounded-full" />
+                        <p class="text-sm text-gray-300">Avg client ROI: 3–10x</p>
+                    </div>
+
+                    <!-- Guarantee -->
+                    <div class="mt-6 bg-black/40 p-4 rounded-lg text-sm leading-relaxed">
+                        <strong>Revenue-First Promise:</strong> If we can’t deliver a launch plan with a clear revenue
+                        pathway, you don’t pay for the blueprint.
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <aside id="book" class="bg-white rounded-xl p-6 text-black shadow-lg" role="form">
+                    <h3 class="text-xl font-semibold mb-2">Free: Launch & Revenue Blueprint (Value $499)</h3>
+                    <p class="text-sm mb-4 text-gray-600">
+                        A 30-minute strategy call + a custom 5-page blueprint covering roadmap, timeline, monetization
+                        and revenue forecast.
+                    </p>
+
+                    <form id="leadForm" method="post" action="/api/lead" onsubmit="return submitLead(event)">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-sm mb-1">Full name</label>
+                                <input id="name" name="name" type="text" required class="w-full border rounded p-2" />
+                            </div>
+
+                            <div>
+                                <label for="role" class="block text-sm mb-1">Role</label>
+                                <select id="role" name="role" required class="w-full border rounded p-2">
+                                    <option value="">Choose</option>
+                                    <option>CEO / Owner</option>
+                                    <option>Business Head</option>
+                                    <option>Gamer / Founder</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <label for="company" class="block mt-4 text-sm">Company / Project</label>
+                        <input id="company" name="company" type="text" placeholder="Project or company name"
+                            class="w-full border rounded p-2" />
+
+                        <label for="budget" class="block mt-4 text-sm">Budget range</label>
+                        <select id="budget" name="budget" required class="w-full border rounded p-2">
+                            <option value="">Select</option>
+                            <option>$3k – $7k (MVP)</option>
+                            <option>$8k – $25k (Growth)</option>
+                            <option>$25k+ (Enterprise)</option>
+                        </select>
+
+                        <label for="desc" class="block mt-4 text-sm">1-line project description</label>
+                        <textarea id="desc" name="desc" rows="3" placeholder="What do you want to build?" required
+                            class="w-full border rounded p-2"></textarea>
+
+                        <!-- UTM Fields -->
+                        <input type="hidden" name="utm_source" id="utm_source" />
+                        <input type="hidden" name="utm_medium" id="utm_medium" />
+                        <input type="hidden" name="utm_campaign" id="utm_campaign" />
+
+                        <div class="flex flex-wrap gap-4 mt-5">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition"
+                                type="submit">
+                                Get my Blueprint — Book call
+                            </button>
+                            <a class="px-5 py-3 border border-gray-400 hover:border-black rounded-lg transition"
+                                href="#demo">
+                                Watch demo
+                            </a>
+                        </div>
+
+                        <p class="text-xs text-gray-500 mt-3">
+                            We respect your privacy. We only use your info to prepare the blueprint & book the call.
+                        </p>
+                    </form>
+
+                    <div class="mt-6 text-sm">
+                        <strong>Prefer to pick a time now?</strong>
+                        <div class="mt-2">
+                            <a href="https://calendly.com/your-calendar" target="_blank" rel="noopener"
+                                class="underline text-blue-600">
+                                Open calendar
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- Problems we solve -->
+        <section class="max-w-7xl mx-auto px-6 py-16" id="how" aria-labelledby="how-title">
+            <!-- Section Title -->
+            <h2 id="how-title" class="text-3xl md:text-4xl font-bold text-center text-[#D34E4E]">
+                Problems we solve
+            </h2>
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 shadow-lg rounded-xl border border-gray-100 hover:shadow-xl transition-all">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">No clear roadmap</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        We deliver a step-by-step plan with costs, timeline and milestones so nothing surprises you.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 shadow-lg rounded-xl border border-gray-100 hover:shadow-xl transition-all">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Failed launches</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        We design the launch funnel & monetization model before you build — increasing your chance to
+                        win.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 shadow-lg rounded-xl border border-gray-100 hover:shadow-xl transition-all">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Hiring risk</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        You get a dedicated team (PM, devs, QA) without lengthy hiring or attrition risks.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing teaser -->
+        <section class="container" id="pricing">
+            <h2 class="text-black font-bold text-lg">Packages (starter preview)</h2>
+            <div class="pricing" style="margin-top:16px">
+                <div class="tier">
+                    <h3>Starter Build</h3>
+                    <p class="small">MVP / Mini-game — $3k – $7k</p>
+                    <ul>
+                        <li>Core features</li>
+                        <li>1 platform</li>
+                        <li>Launch support</li>
+                    </ul>
+                    <div style="margin-top:10px"><a href="#book" class="btn btn-primary">Get Quote</a></div>
+                </div>
+                <div class="tier">
+                    <h3>Growth Build</h3>
+                    <p class="small">$8k – $25k</p>
+                    <ul>
+                        <li>Multi-platform</li>
+                        <li>Monetization</li>
+                        <li>Launch campaign</li>
+                    </ul>
+                    <div style="margin-top:10px"><a href="#book" class="btn btn-primary">Get Quote</a></div>
+                </div>
+                <div class="tier">
+                    <h3>Enterprise Build</h3>
+                    <p class="small">$25k+</p>
+                    <ul>
+                        <li>Custom architecture</li>
+                        <li>Full dev team</li>
+                        <li>Growth ops</li>
+                    </ul>
+                    <div style="margin-top:10px"><a href="#book" class="btn btn-primary">Get Quote</a></div>
+                </div>
+            </div>
+        </section>
+        <!-- Case studies -->
+        <section class="container" id="case">
+            <h2>Selected results</h2>
+            <div style="display:flex;gap:16px;margin-top:16px;flex-wrap:wrap">
+                <div style="flex:1;min-width:260px" class="card">
+                    <strong>Fitness SaaS — launched 45 days</strong>
+                    <p class="small">Result: $35k MRR in month 2. We handled dev + launch funnel.</p>
+                </div>
+                <div style="flex:1;min-width:260px" class="card">
+                    <strong>Indie Game — revenue-first</strong>
+                    <p class="small">Result: $18k first-week gross from in-app purchases and paid demo.</p>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ -->
+        <section id="faq" class="max-w-6xl mx-auto px-6 py-20 bg-gradient-to-b from-gray-50 to-white">
+            <!-- Section Title -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-[#D34E4E]">
+                Frequently Asked Questions
+            </h2>
+            <!-- FAQ Wrapper -->
+            <div class="mt-12 space-y-4">
+
+                <!-- Item 1 -->
+                <details
+                    class="group bg-white border border-gray-200 rounded-xl shadow-sm p-6 cursor-pointer hover:shadow-md transition-all">
+                    <summary class="flex items-center justify-between text-lg font-medium text-gray-800">
+                        <span>What’s included in the free blueprint?</span>
+                        <span class="text-gray-500 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 leading-relaxed text-sm">
+                        A 5-page plan with feature roadmap, timeline, cost, monetization and a 90-day revenue forecast.
+                    </p>
+                </details>
+
+                <!-- Item 2 -->
+                <details
+                    class="group bg-white border border-gray-200 rounded-xl shadow-sm p-6 cursor-pointer hover:shadow-md transition-all">
+                    <summary class="flex items-center justify-between text-lg font-medium text-gray-800">
+                        <span>How long is the call?</span>
+                        <span class="text-gray-500 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 leading-relaxed text-sm">
+                        30 minutes. Bring your idea and we’ll prepare a tailored roadmap during the call.
+                    </p>
+                </details>
+
+                <!-- Item 3 -->
+                <details
+                    class="group bg-white border border-gray-200 rounded-xl shadow-sm p-6 cursor-pointer hover:shadow-md transition-all">
+                    <summary class="flex items-center justify-between text-lg font-medium text-gray-800">
+                        <span>Do you provide post-launch support?</span>
+                        <span class="text-gray-500 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 leading-relaxed text-sm">
+                        Yes — we offer monthly retainer development & growth packages.
+                    </p>
+                </details>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Sticky CTA -->
+    <div id="sticky"
+        class="fixed bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] max-w-3xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-xl py-8 px-6 z-40 flex flex-col md:flex-row items-center justify-between gap-4 rounded-xl"
+        role="region" aria-label="Book free blueprint">
+        <!-- Text -->
+        <div class="text-lg font-bold tracking-wide text-center md:text-left">
+            🚀 Ready to Launch?
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex gap-3 flex-wrap justify-center md:justify-start">
+            <a href="#book"
+                class="bg-white text-indigo-600 hover:bg-gray-100 transition-all font-semibold px-5 py-2 rounded-full shadow">
+                Book Free Blueprint
+            </a>
+
+            <a href="tel:YOUR_PHONE"
+                class="border border-white hover:bg-white hover:text-indigo-600 transition-all font-semibold px-5 py-2 rounded-full"
+                aria-label="Call us">
+                Call
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#021028] text-white py-6 mt-9 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <!-- Left: Copyright -->
+            <div class="text-center md:text-left text-lg">
+                © <strong>LaunchBuild</strong> <span id="year"></span>
+            </div>           
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("menuBtn").onclick = () => {
+            const menu = document.getElementById("mobileMenu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        };
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Read UTMs into form fields
+        (function setUtm() {
+            function param(key) { const u = new URLSearchParams(location.search); return u.get(key) || '' }
+            document.getElementById('utm_source').value = param('utm_source');
+            document.getElementById('utm_medium').value = param('utm_medium');
+            document.getElementById('utm_campaign').value = param('utm_campaign');
+        })();
+
+        // Simple form submit (AJAX). Replace /api/lead with your endpoint.
+        async function submitLead(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = {
+                name: form.name.value.trim(),
+                role: form.role.value,
+                company: form.company.value.trim(),
+                budget: form.budget.value,
+                desc: form.desc.value.trim(),
+                utm_source: form.utm_source.value,
+                utm_medium: form.utm_medium.value,
+                utm_campaign: form.utm_campaign.value,
+                page: location.href
+            };
+
+            // Basic validation
+            if (!data.name || !data.role || !data.budget || !data.desc) {
+                alert('Please complete the required fields.');
+                return false;
+            }
+
+            // Disable button
+            const btn = form.querySelector('button[type="submit"]');
+            btn.disabled = true; btn.textContent = 'Sending…';
+
+            try {
+                // POST to your backend webhook (replace URL)
+                const resp = await fetch(form.action, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (!resp.ok) throw new Error('Network error');
+
+                // Success: redirect to calendar or show thank-you
+                // Option A: open Calendly to schedule (uncomment if preferred)
+                // window.open('https://calendly.com/your-calendar', '_blank');
+
+                // Option B: show simple thank-you modal / redirect to /thank-you
+                window.location.href = '/thank-you?name=' + encodeURIComponent(data.name);
+            } catch (err) {
+                console.error(err);
+                alert('Something went wrong — please try again.');
+                btn.disabled = false; btn.textContent = 'Get my Blueprint — Book call';
+            }
+            return false;
+        }
+
+        // Show sticky CTA only after scroll
+        (function stickyBehavior() {
+            const sticky = document.getElementById('sticky');
+            let shown = false;
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400 && !shown) { sticky.classList.remove('hidden'); shown = true }
+                if (window.scrollY < 300 && shown) { sticky.classList.add('hidden'); shown = false }
+            });
+            // Initially hidden on mobile large screens
+            if (window.innerWidth < 700) sticky.classList.remove('hidden'); else sticky.classList.add('hidden');
+        })();
+    </script>
+</body>
+
+</html>
